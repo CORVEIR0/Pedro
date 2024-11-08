@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotos</title>
+
+    <style>
+        body {
+            background-color: #8a9cf6;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* Estilo para o botão de voltar */
+        .back-button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .back-button:hover {
+            background-color: #555;
+        }
+
+        .img-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .img-container img {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 300px;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .img-container img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Menu Lateral */
+        .side-menu {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: rgba(17, 17, 17, 0.9);
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+            z-index: 1;
+        }
+
+        .side-menu a {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .side-menu a:hover {
+            color: #f1f1f1;
+        }
+
+        .side-menu .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            font-size: 36px;
+            color: white;
+        }
+
+        /* Botão de Menu */
+        #menuButton {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            z-index: 2;
+        }
+
+        #menuButton:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Botão para abrir o menu lateral -->
+    <button id="menuButton" onclick="openMenu()">☰</button>
+
+    <div class="img-container">
+        <img src="Imagem do WhatsApp de 2024-10-28 à(s) 01.41.00_0c891379.jpg" alt="Imagem 1">
+        <img src="Imagem do WhatsApp de 2024-10-28 à(s) 01.41.00_6ccfab89.jpg" alt="Imagem 2">
+        <img src="Imagem do WhatsApp de 2024-10-28 à(s) 01.41.00_be9cc4c5.jpg" alt="Imagem 3">
+    </div>
+
+    <!-- Botão de voltar como link para uma página específica -->
+    <a href="inicio.html" class="back-button">Voltar</a>
+
+    <!-- Menu Lateral -->
+    <div id="sideMenu" class="side-menu">
+        <a href="javascript:void(0)" class="close-btn" onclick="closeMenu()">&times;</a>
+        <a href="inicio.html">Início</a>
+        <a href="FOTOS.html">Fotos</a>
+        <a href="maps.html">Localizações</a>
+        <a href="https://www.youtube.com/@corveiro_yt" target="_blank">YouTube</a>
+        <a href="https://github.com/CORVEIR0" target="_blank">GitHub</a>
+        <a href="quem sou eu.html">Quem Sou Eu</a>
+        <a href="Formulario.html">Formulario</a>
+        <a href="Cadastr0.html">Cadastro</a>
+    </div>
+
+    <script>
+        function openMenu() {
+            document.getElementById("sideMenu").style.width = "250px";
+        }
+
+        function closeMenu() {
+            document.getElementById("sideMenu").style.width = "0";
+        }
+    </script>
+
+</body>
+</html>

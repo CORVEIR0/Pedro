@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Site</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRg4Xyu7jxElaV89VGTpmydZS6bwtqUkzpevg&s'); /* Substitua 'sua-imagem.jpg' pelo caminho da sua imagem */
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            color: rgb(255, 255, 255); /* Ajusta a cor do texto para legibilidade sobre a imagem */
+        }
+
+        header {
+            background-color: rgb(0, 0, 0);
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: rgb(0, 0, 0);
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .main-content {
+            padding: 20px;
+            text-align: center;
+            background-color: rgb(0, 0, 0); /* Fundo semitransparente para melhorar a legibilidade */
+            margin: 20px;
+            border-radius: 8px;
+        }
+
+        footer {
+            background-color: rgb(0, 0, 0);
+            color: white;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        /* Menu Lateral */
+        .side-menu {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: rgb(0, 0, 0);
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+            z-index: 1;
+        }
+
+        .side-menu a {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #ffffff;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .side-menu a:hover {
+            color: #f1f1f1;
+        }
+
+        .side-menu .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            font-size: 36px;
+            color: white;
+        }
+
+        #menuButton {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #menuButton:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Bem-vindo ao Meu Site!</h1>
+    <button id="menuButton" onclick="openMenu()">☰ Menu</button>
+</header>
+
+<nav>
+    <a href="inicio.html">Início</a>
+</nav>
+
+<div class="main-content">
+    <h2>Olá, eu sou Pedro Henrique</h2>
+    <p>Seja bem-vindo ao meu site pessoal, onde você pode descobrir mais sobre mim e os projetos nos quais estou envolvido. Aqui voce saberar um pouco do que faço.</p>
+</div>
+
+<div id="sideMenu" class="side-menu">
+    <a href="javascript:void(0)" class="close-btn" onclick="closeMenu()">&times;</a>
+    <a href="inicio.html">Início</a>
+    <a href="FOTOS.html">Fotos</a>
+    <a href="maps.html">Localizações</a>
+    <a href="https://www.youtube.com/@corveiro_yt" target="_blank">YouTube</a>
+    <a href="https://github.com/CORVEIR0" target="_blank">GitHub</a>
+    <a href="quem sou eu.html">Quem Sou Eu</a>
+    <a href="Formulario.html">Formulario</a>
+    <a href="Cadastr0.html">Cadastro</a>
+</div>
+
+<script>
+    function openMenu() {
+        document.getElementById("sideMenu").style.width = "250px";
+    }
+
+    function closeMenu() {
+        document.getElementById("sideMenu").style.width = "0";
+    }
+</script>
+
+</body>
+</html> 

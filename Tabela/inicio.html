@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            transition: background-color 0.3s, color 0.3s;
+            color: #000;
+        }
+        
+        /* Tema escuro */
+        body.dark-theme {
+            background-color: #222;
+            color: #fff;
+        }
+
+        header {
+            background-color: #000;
+            color: rgb(17, 0, 255);
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #454640;
+        }
+
+        nav a {
+            color: rgb(255, 255, 255);
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        nav a:hover {
+            background-color: #072cff;
+        }
+
+        section {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background-color: rgb(0, 102, 255);
+            box-shadow: 0 4px 8px rgb(22, 247, 1);
+        }
+
+        footer {
+            background-color: #00cbfd7e;
+            color: rgb(32, 0, 216);
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Botão de alternância de tema */
+        .theme-toggle {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background-color: #000;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .theme-toggle:hover {
+            background-color: #333;
+        }
+
+        /* Menu Lateral */
+        .side-menu {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+            z-index: 1;
+        }
+
+        .side-menu a {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .side-menu a:hover {
+            color: #f1f1f1;
+        }
+
+        .side-menu .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+            color: white;
+        }
+
+        /* Botão para abrir o menu */
+        #menuButton {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background-color: #000;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        #menuButton:hover {
+            background-color: #333;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Bem-vindo à Nossa Página Inicial</h1>
+</header>
+
+<nav>
+    <a href="quem sou eu.html">Quem Sou Eu</a>
+    <a href="tabela.html">Cadastro</a>
+</nav>
+
+<!-- Botão de alternância de tema -->
+<button class="theme-toggle" onclick="toggleTheme()">🌙 Tema</button>
+
+<section>
+    <div class="content">
+        <h2>Quem sou eu</h2>
+        <p>Prazer sou o Pedro Henrique</p>
+    </div>
+</section>
+
+<!-- Botão para abrir o menu lateral -->
+<button id="menuButton" onclick="openMenu()">Menu</button>
+
+<!-- Menu Lateral -->
+<div id="sideMenu" class="side-menu">
+    <a href="javascript:void(0)" class="close-btn" onclick="closeMenu()">&times;</a>
+    <a href="inicio.html">Início</a>
+    <a href="FOTOS.html">Fotos</a>
+    <a href="maps.html">Localizações</a>
+    <a href="https://www.youtube.com/@corveiro_yt" target="_blank">YouTube</a>
+    <a href="https://github.com/CORVEIR0" target="_blank">GitHub</a>
+    <a href="quem sou eu.html">Quem Sou Eu</a>
+    <a href="Formulario.html">Formulario</a>
+    <a href="Cadastr0.html">Cadastro</a>
+</div>
+
+<footer>
+    <p>&copy; 2024 Pedro Henrique</p>
+</footer>
+
+<script>
+    // Alterna entre o tema claro e escuro
+    function toggleTheme() {
+        document.body.classList.toggle('dark-theme');
+    }
+
+    // Abre o menu lateral
+    function openMenu() {
+        document.getElementById("sideMenu").style.width = "250px";
+    }
+
+    // Fecha o menu lateral
+    function closeMenu() {
+        document.getElementById("sideMenu").style.width = "0";
+    }
+</script>
+
+</body>
+</html>

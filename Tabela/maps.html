@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Localização</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        header {
+            background-color: #333;
+            color: rgb(255, 255, 255);
+            padding: 15px;
+            text-align: center;
+            position: relative;
+        }
+
+        .map-container {
+            max-width: 100%;
+            height: 500px;
+            margin: auto;
+            text-align: center;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .back-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #333;
+            color: rgb(255, 255, 255);
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .back-button:hover {
+            background-color: #555;
+        }
+
+        /* Menu Lateral */
+        .side-menu {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+            z-index: 1;
+        }
+
+        .side-menu a {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .side-menu a:hover {
+            color: #f1f1f1;
+        }
+
+        .side-menu .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+            color: white;
+        }
+
+        /* Botão para abrir o menu */
+        #menuButton {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #menuButton:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Localização</h1>
+    <!-- Botão para abrir o menu lateral -->
+    <button id="menuButton" onclick="openMenu()">☰ Menu</button>
+</header>
+
+<section>
+    <h2>Encontre-nos no mapa abaixo:</h2>
+    <div class="map-container">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4708.06241103511!2d-44.25240768827828!3d-19.432676022941177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa64ff8f3dd12e1%3A0x4a3d779e69beb723!2sSENAI%20Sete%20Lagoas%20Funda%C3%A7%C3%A3o%20Zerrenner!5e1!3m2!1spt-BR!2sbr!4v1730091457319!5m2!1spt-BR!2sbr"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <!-- Botão de voltar -->
+    <button class="back-button" onclick="goBack()">Voltar</button>
+</section>
+
+<!-- Menu Lateral -->
+<div id="sideMenu" class="side-menu">
+    <a href="javascript:void(0)" class="close-btn" onclick="closeMenu()">&times;</a>
+    <a href="inicio.html">Início</a>
+    <a href="fotos.html">Fotos</a>
+    <a href="maps.html">Localizações</a>
+    <a href="https://www.youtube.com/@corveiro_yt" target="_blank">YouTube</a>
+    <a href="https://github.com/CORVEIR0" target="_blank">GitHub</a>
+    <a href="quem sou eu.html">Quem Sou Eu</a>
+    <a href="Formulario.html">Formulario</a>
+    <a href="Cadastr0.html">Cadastro</a>
+</div>
+
+<script>
+    // Função para abrir o menu lateral
+    function openMenu() {
+        document.getElementById("sideMenu").style.width = "250px";
+    }
+
+    // Função para fechar o menu lateral
+    function closeMenu() {
+        document.getElementById("sideMenu").style.width = "0";
+    }
+
+    // Função para voltar à página anterior
+    function goBack() {
+        window.history.back();
+    }
+</script>
+
+</body>
+</html>

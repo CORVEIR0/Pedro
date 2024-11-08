@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="tabela.css">
+    <style>
+        /* Estilos do menu */
+        .menu-button {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .menu {
+            display: none;
+            position: absolute;
+            top: 50px;
+            left: 10px;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            list-style-type: none;
+            width: 200px;
+        }
+
+        .menu li {
+            padding: 10px 0;
+        }
+
+        .menu li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .menu li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Estilos do formulário */
+        .form-container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .form-group .short-input {
+            width: 48%;
+            display: inline-block;
+        }
+
+        .form-group .radio {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .submit-button {
+            width: 100%;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        .submit-button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <!-- Botão de menu -->
+    <button class="menu-button" onclick="toggleMenu()">☰ Menu</button>
+    
+    <!-- Menu suspenso -->
+    <ul class="menu" id="menu">
+        <li><a href="inicio.html">Início</a></li>
+        <li><a href="FOTOS.html" target="_blank">Fotos</a></li>
+        <li><a href="maps.html">Localização</a></li>
+        <li><a href="https://www.youtube.com/@corveiro_yt" target="_blank">YouTube</a></li>
+        <li><a href="https://github.com/CORVEIR0" target="_blank">GitHub</a></li>
+        <li><a href="quem sou eu.html">Quem Sou Eu</a></li>
+        <li><a href="Formulario.html">Formulario</a></li>
+        <li><a href="Cadastro.html">Cadastro</a></li>
+    </ul>
+
+    <!-- Formulário -->
+    <div class="form-container">
+        <form action="config.php" method="post">
+            <div class="form-group">
+                <label for="name">Nome e Sobrenome</label>
+                <input type="text" id="name" placeholder="Nome" name="nome" required class="short-input">
+                <input type="text" id="surname" placeholder="Sobrenome" name="sobrenome" required class="short-input">
+            </div>
+            <div class="form-group">
+                <label for="company">Empresa</label>
+                <input type="text" id="company" name="empresa" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Telefone com DDD</label>
+                <input type="text" id="ddd" placeholder="DDD" name="ddd" required class="short-input">
+                <input type="text" id="phone" placeholder="Telefone" name="telefone" required class="short-input">
+            </div>
+            <div class="form-group">
+                <label for="gender">Sexo</label>
+                <select id="gender" name="sexo" required>
+                    <option disabled="disabled" selected="selected">--Selecione a Opção--</option>
+                    <option value="masculino">Masculino</option>
+                    <option value="feminino">Feminino</option>
+                    <option value="outro">Outro</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <h2>Você é iniciante?</h2>
+                <label class="radio">
+                    <input class="radio-sim" value="Sim" type="radio" name="nivel" checked>
+                    Sim
+                </label>
+                <label class="radio">
+                    <input class="radio-não" value="Não" type="radio" name="nivel">
+                    Não
+                </label>
+            </div>
+            <button type="submit" class="submit-button" name="submit">Enviar</button>
+        </form>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</body>
+</html>

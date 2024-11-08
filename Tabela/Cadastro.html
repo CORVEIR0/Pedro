@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzq4Eu99V4cb3RJfE7ci0STJudHZRacgCXEA&s');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            color: white;
+        }
+
+        header, footer {
+            background-color: rgb(0, 0, 0);
+            color: rgb(65, 0, 243);
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav {
+            background-color: rgba(0, 0, 0, 0.7);
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav a {
+            color: rgb(0, 236, 185);
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .menu-button {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .menu {
+            display: none;
+            position: absolute;
+            top: 50px;
+            left: 10px;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            list-style-type: none;
+            width: 200px;
+        }
+
+        .menu li {
+            padding: 10px 0;
+        }
+
+        .menu li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .menu li a:hover {
+            text-decoration: underline;
+        }
+
+        .main-content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        form {
+            display: inline-block;
+            text-align: left;
+            width: 100%;
+            max-width: 400px;
+            background-color: rgb(0, 0, 0);
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        .submit-button {
+            background-color: #000000;
+            color: rgb(0, 236, 253);
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .submit-button:hover {
+            background-color: #8400ff;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Cadastro</h1>
+</header>
+
+<!-- Botão de menu -->
+<button class="menu-button" onclick="toggleMenu()">☰ Menu</button>
+
+<!-- Menu suspenso -->
+<ul class="menu" id="menu">
+    <li><a href="inicio.html">Início</a></li>
+    <li><a href="FOTOS.html" target="_blank">Fotos</a></li>
+    <li><a href="maps.html">Localização</a></li>
+    <li><a href="https://www.youtube.com/@corveiro_yt" target="_blank">YouTube</a></li>
+    <li><a href="https://github.com/CORVEIR0" target="_blank">GitHub</a></li>
+    <li><a href="quem sou eu.html">Quem Sou Eu</a></li>
+    <li><a href="Formulario.html">Formulario</a></li>
+    <li><a href="Cadastro.html">Cadastro</a></li>
+</ul>
+
+<nav>
+    <a href="inicio.html">Início</a>
+    <a href="quem sou eu.html">Quem Sou Eu</a>
+    <a href="Cadastr0.html">Cadastro</a>
+</nav>
+
+<div class="main-content">
+    <h2>Formulário de Contato</h2>
+    <form action="enviar.php" method="post">
+        <div class="form-group">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="nome" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="message">Mensagem:</label>
+            <textarea id="message" name="mensagem" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="submit-button">Enviar</button>
+    </form>
+</div>
+
+<script>
+    function toggleMenu() {
+        var menu = document.getElementById('menu');
+        if (menu.style.display === 'block') {
+            menu.style.display = 'none';
+        } else {
+            menu.style.display = 'block';
+        }
+    }
+</script>
+
+</body>
+</html>
